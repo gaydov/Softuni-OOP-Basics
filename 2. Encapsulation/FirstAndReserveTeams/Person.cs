@@ -13,9 +13,28 @@
         this.Salary = salary;
     }
 
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public int Age { get; set; }
-    public double Salary { get; set; }
+    public string FirstName
+    {
+        get { return this.firstName; }
+        set { this.firstName = value; }
+    }
+
+    public string LastName
+    {
+        get { return this.lastName; }
+        set { this.lastName = value; }
+    }
+
+    public int Age
+    {
+        get { return this.age; }
+        set { this.age = value; }
+    }
+
+    public double Salary
+    {
+        get { return this.salary; }
+        set { this.salary = value; }
+    }
 }
 
