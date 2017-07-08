@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-public class Employee
+﻿public class Employee
 {
     private string name = string.Empty;
     private decimal salary = 0;
