@@ -9,11 +9,11 @@ public class Dough
 
     private readonly string[] allowedTypes = { "white", "wholegrain" };
     private readonly string[] allowedTechniques = { "crispy", "chewy", "homemade" };
-    private const double whiteModifier = 1.5;
-    private const double wholeGrainModifier = 1.0;
-    private const double crispyModifier = 0.9;
-    private const double chewyModifier = 1.1;
-    private const double homeMadeModifier = 1.0;
+    private const double WhiteModifier = 1.5;
+    private const double WholeGrainModifier = 1.0;
+    private const double CrispyModifier = 0.9;
+    private const double ChewyModifier = 1.1;
+    private const double HomeMadeModifier = 1.0;
 
     public Dough(string flourType, string bakingTechnique, double weight)
     {
@@ -68,11 +68,11 @@ public class Dough
         switch (this.flourType.ToLower())
         {
             case "white":
-                flourModifier = whiteModifier;
+                flourModifier = WhiteModifier;
                 break;
 
             case "wholegrain":
-                flourModifier = wholeGrainModifier;
+                flourModifier = WholeGrainModifier;
                 break;
         }
 
@@ -81,15 +81,15 @@ public class Dough
         switch (this.bakingTechnique.ToLower())
         {
             case "crispy":
-                bakingModifier = crispyModifier;
+                bakingModifier = CrispyModifier;
                 break;
 
             case "chewy":
-                bakingModifier = chewyModifier;
+                bakingModifier = ChewyModifier;
                 break;
 
             case "homemade":
-                bakingModifier = homeMadeModifier;
+                bakingModifier = HomeMadeModifier;
                 break;
         }
 

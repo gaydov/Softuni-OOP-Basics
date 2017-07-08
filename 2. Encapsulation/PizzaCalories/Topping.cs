@@ -7,10 +7,10 @@ public class Topping
     private double weight;
 
     private readonly string[] allowedTypes = { "meat", "veggies", "cheese", "sauce" };
-    private const double meatModifier = 1.2;
-    private const double veggiesModifier = 0.8;
-    private const double cheeseModifier = 1.1;
-    private const double sauceModifier = 0.9;
+    private const double MeatModifier = 1.2;
+    private const double VeggiesModifier = 0.8;
+    private const double CheeseModifier = 1.1;
+    private const double SauceModifier = 0.9;
 
     public Topping(string type, double weight)
     {
@@ -25,19 +25,19 @@ public class Topping
         switch (this.type.ToLower())
         {
             case "meat":
-                typeModifier = meatModifier;
+                typeModifier = MeatModifier;
                 break;
 
             case "veggies":
-                typeModifier = veggiesModifier;
+                typeModifier = VeggiesModifier;
                 break;
 
             case "cheese":
-                typeModifier = cheeseModifier;
+                typeModifier = CheeseModifier;
                 break;
 
             case "sauce":
-                typeModifier = sauceModifier;
+                typeModifier = SauceModifier;
                 break;
         }
 
