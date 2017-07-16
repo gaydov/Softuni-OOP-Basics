@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamPrep-11th-July-2017", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamPrep-12th-July-2017-Avatar", "ExamPrep-12th-July-2017-Avatar\ExamPrep-12th-July-2017-Avatar.csproj", "{17DEFBBE-0CF8-4184-9F7F-220E877576B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam-16th-July-2017", "Exam-16th-July-2017\Exam-16th-July-2017.csproj", "{D9DD7BB8-52FD-48FB-B561-71C342990909}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{17DEFBBE-0CF8-4184-9F7F-220E877576B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17DEFBBE-0CF8-4184-9F7F-220E877576B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17DEFBBE-0CF8-4184-9F7F-220E877576B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9DD7BB8-52FD-48FB-B561-71C342990909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9DD7BB8-52FD-48FB-B561-71C342990909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9DD7BB8-52FD-48FB-B561-71C342990909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9DD7BB8-52FD-48FB-B561-71C342990909}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
