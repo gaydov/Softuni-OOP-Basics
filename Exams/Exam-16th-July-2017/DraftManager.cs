@@ -24,57 +24,34 @@ public class DraftManager
     {
         string type = arguments[0];
         string id = arguments[1];
-        double oreOutput = double.Parse(arguments[2]);
-        double energyRequirement = double.Parse(arguments[3]);
 
         try
         {
-            switch (type)
-            {
-                case "Hammer":
+            this.harvesters.Add(id, HarvesterFactory.GenerateHarvester(arguments));
+            return $"Successfully registered {type} Harvester - {id}";
 
-                    this.harvesters.Add(id, new HammerHarvester(id, oreOutput, energyRequirement));
-                    return $"Successfully registered {type} Harvester - {id}";
-
-                case "Sonic":
-
-                    int sonicFactor = int.Parse(arguments[4]);
-                    this.harvesters.Add(id, new SonicHarvester(id, oreOutput, energyRequirement, sonicFactor));
-                    return $"Successfully registered {type} Harvester - {id}";
-            }
         }
         catch (ArgumentException ae)
         {
             return ae.Message;
         }
-        return string.Empty;
     }
 
     public string RegisterProvider(List<string> arguments)
     {
         string type = arguments[0];
         string id = arguments[1];
-        double energyOutput = double.Parse(arguments[2]);
 
         try
         {
-            switch (type)
-            {
-                case "Pressure":
-                    this.providers.Add(id, new PressureProvider(id, energyOutput));
-                    return $"Successfully registered {type} Provider - {id}";
-
-                case "Solar":
-                    this.providers.Add(id, new SolarProvider(id, energyOutput));
-                    return $"Successfully registered {type} Provider - {id}";
-            }
+            this.providers.Add(id, ProviderFactory.GenerateProvider(arguments));
+            return $"Successfully registered {type} Provider - {id}";
         }
+
         catch (ArgumentException ae)
         {
             return ae.Message;
         }
-
-        return string.Empty;
     }
 
     public string Day()

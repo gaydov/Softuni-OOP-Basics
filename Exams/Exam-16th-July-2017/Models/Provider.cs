@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Text;
 
-public abstract class Provider
+public abstract class Provider : Worker
 {
     private string id;
     private double energyOutput;
 
     protected Provider(string id, double energyOutput)
+        : base(id)
     {
-        this.Id = id;
         this.EnergyOutput = energyOutput;
     }
 
@@ -25,12 +25,6 @@ public abstract class Provider
 
             this.energyOutput = value;
         }
-    }
-
-    public string Id
-    {
-        get { return this.id; }
-        protected set { this.id = value; }
     }
 
     public override string ToString()
