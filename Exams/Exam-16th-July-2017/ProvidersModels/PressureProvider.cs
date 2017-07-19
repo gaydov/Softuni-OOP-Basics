@@ -2,10 +2,24 @@
 
 public class PressureProvider : Provider
 {
+    private const double energyPercentIncrease = 50 / 100.0;
+
     public PressureProvider(string id, double energyOutput)
         : base(id, energyOutput)
     {
-        this.EnergyOutput += this.EnergyOutput * 50 / 100;
+    }
+
+    public override double EnergyOutput
+    {
+        get
+        {
+            return base.EnergyOutput;
+        }
+
+        protected set
+        {
+            base.EnergyOutput = value + value * energyPercentIncrease;
+        }
     }
 
     public override string ToString()

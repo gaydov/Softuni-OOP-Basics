@@ -5,6 +5,10 @@ using System.Text;
 
 public class DraftManager
 {
+    private const string initialSystemMode = "Full";
+    private const double halfModeEnergyPercentage = 60 / 100.0;
+    private const double halfModeMinedOrePercentage = 50 / 100.0;
+
     private readonly Dictionary<string, Harvester> harvesters;
     private readonly Dictionary<string, Provider> providers;
     private double totalStoredEnergy;
@@ -17,7 +21,7 @@ public class DraftManager
         this.providers = new Dictionary<string, Provider>();
         this.totalStoredEnergy = 0;
         this.totalMinedOre = 0;
-        this.modeType = "Full";
+        this.modeType = initialSystemMode;
     }
 
     public string RegisterHarvester(List<string> arguments)
@@ -71,15 +75,16 @@ public class DraftManager
 
             case "Half":
 
-                requiredEnergyPerMode = this.harvesters.Values.Sum(h => h.EnergyRequirement * 60 / 100);
-                minedOrePerMode = this.harvesters.Values.Sum(h => h.OreOutput * 50 / 100);
+                requiredEnergyPerMode = this.harvesters.Values.Sum(h => h.EnergyRequirement * halfModeEnergyPercentage);
+                minedOrePerMode = this.harvesters.Values.Sum(h => h.OreOutput * halfModeMinedOrePercentage);
                 break;
         }
 
         this.totalStoredEnergy += dailyProvidedEnergy;
 
-        if (!this.modeType.Equals("Energy")) // in "Energy" mode there is no mining, only the providers work
+        if (!this.modeType.Equals("Energy")) // In "Energy" mode there is no mining, only the providers work
         {
+            // Mining process
             if (requiredEnergyPerMode <= this.totalStoredEnergy)
             {
                 this.totalStoredEnergy -= requiredEnergyPerMode;

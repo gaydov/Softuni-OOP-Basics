@@ -42,6 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandGenerator\ChangeModeCommand.cs" />
+    <Compile Include="CommandGenerator\CheckStatusCommand.cs" />
+    <Compile Include="CommandGenerator\Command.cs" />
+    <Compile Include="CommandGenerator\RegisterHarvesterCommand.cs" />
+    <Compile Include="CommandGenerator\RegisterProviderCommand.cs" />
+    <Compile Include="CommandGenerator\ShutdownCommand.cs" />
+    <Compile Include="CommandGenerator\StartDayCommand.cs" />
+    <Compile Include="CommandInterpreter\CommandInterpreter.cs" />
     <Compile Include="DraftManager.cs" />
     <Compile Include="Factories\HarvesterFactory.cs" />
     <Compile Include="Factories\ProviderFactory.cs" />

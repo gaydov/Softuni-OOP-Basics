@@ -2,11 +2,38 @@
 
 public class HammerHarvester : Harvester
 {
+    private const double orePercentIncrease = 200 / 100.0;
+    private const double energyPercentIncrease = 100 / 100.0;
+
     public HammerHarvester(string id, double oreOutput, double energyRequirement)
         : base(id, oreOutput, energyRequirement)
     {
-        this.OreOutput += this.OreOutput * 200 / 100;
-        this.EnergyRequirement += this.EnergyRequirement * 100 / 100;
+    }
+
+    public override double OreOutput
+    {
+        get
+        {
+            return base.OreOutput;
+        }
+
+        protected set
+        {
+            base.OreOutput = value + value * orePercentIncrease;
+        }
+    }
+
+    public override double EnergyRequirement
+    {
+        get
+        {
+            return base.EnergyRequirement;
+        }
+
+        protected set
+        {
+            base.EnergyRequirement = value + value * energyPercentIncrease;
+        }
     }
 
     public override string ToString()

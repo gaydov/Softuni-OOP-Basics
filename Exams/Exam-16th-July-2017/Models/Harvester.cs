@@ -3,24 +3,27 @@ using System.Text;
 
 public abstract class Harvester : Worker
 {
-    private string id;
+    private double minEnergyRequirement = 0;
+    private double maxEnergyRequirement = 20000;
+    private double minOreOutput = 0;
+
     private double oreOutput;
     private double energyRequirement;
 
     protected Harvester(string id, double oreOutput, double energyRequirement)
-        :base(id)
+        : base(id)
     {
         this.OreOutput = oreOutput;
         this.EnergyRequirement = energyRequirement;
     }
 
-    public double EnergyRequirement
+    public virtual double EnergyRequirement
     {
         get { return this.energyRequirement; }
 
         protected set
         {
-            if (value < 0 || value > 20000)
+            if (value < minEnergyRequirement || value > maxEnergyRequirement)
             {
                 throw new ArgumentException($"Harvester is not registered, because of it's EnergyRequirement");
             }
@@ -29,13 +32,13 @@ public abstract class Harvester : Worker
         }
     }
 
-    public double OreOutput
+    public virtual double OreOutput
     {
         get { return this.oreOutput; }
 
         protected set
         {
-            if (value < 0)
+            if (value < minOreOutput)
             {
                 throw new ArgumentException($"Harvester is not registered, because of it's OreOutput");
             }
@@ -47,7 +50,7 @@ public abstract class Harvester : Worker
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
- 
+
         sb.AppendLine($"Ore Output: {this.OreOutput}");
         sb.AppendLine($"Energy Requirement: {this.EnergyRequirement}");
 
