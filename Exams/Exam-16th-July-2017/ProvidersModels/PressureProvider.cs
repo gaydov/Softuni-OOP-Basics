@@ -2,8 +2,6 @@
 
 public class PressureProvider : Provider
 {
-    private const double energyPercentIncrease = 50 / 100.0;
-
     public PressureProvider(string id, double energyOutput)
         : base(id, energyOutput)
     {
@@ -18,7 +16,7 @@ public class PressureProvider : Provider
 
         protected set
         {
-            base.EnergyOutput = value + value * energyPercentIncrease;
+            base.EnergyOutput = value + value * Constants.PercentIncreaseEnergy;
         }
     }
 

@@ -14,7 +14,7 @@ public class SonicHarvester : Harvester
     public int SonicFactor
     {
         get { return this.sonicFactor; }
-        set { this.sonicFactor = value; }
+        protected set { this.sonicFactor = value; }
     }
 
     public override string ToString()

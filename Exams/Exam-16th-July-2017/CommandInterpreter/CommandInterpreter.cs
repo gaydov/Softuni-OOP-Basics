@@ -8,14 +8,15 @@ public class CommandInterpreter
     {
         DraftManager draftManager = new DraftManager();
         string input = Console.ReadLine();
-        string result = string.Empty;
 
         while (true)
         {
             List<string> inputArgs = input.Split().ToList();
             string commandName = inputArgs[0];
             List<string> commandArgs = inputArgs.Skip(1).ToList();
+
             Command cmdToBeExecuted = null;
+            string result = string.Empty;
 
             switch (commandName)
             {
@@ -43,6 +44,12 @@ public class CommandInterpreter
                     cmdToBeExecuted = new ShutdownCommand(draftManager, commandArgs);
                     Console.WriteLine(cmdToBeExecuted.Execute());
                     return;
+            }
+
+            // In case an invalid command is entered:
+            if (cmdToBeExecuted == null)
+            {
+                throw new ArgumentException("Invalid command.");
             }
 
             result = cmdToBeExecuted.Execute();

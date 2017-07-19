@@ -3,10 +3,6 @@ using System.Text;
 
 public abstract class Harvester : Worker
 {
-    private double minEnergyRequirement = 0;
-    private double maxEnergyRequirement = 20000;
-    private double minOreOutput = 0;
-
     private double oreOutput;
     private double energyRequirement;
 
@@ -23,9 +19,9 @@ public abstract class Harvester : Worker
 
         protected set
         {
-            if (value < minEnergyRequirement || value > maxEnergyRequirement)
+            if (value < Constants.MinEnergyRequirement || value > Constants.MaxEnergyRequirement)
             {
-                throw new ArgumentException($"Harvester is not registered, because of it's EnergyRequirement");
+                throw new ArgumentException($"Harvester is not registered, because of it's {nameof(EnergyRequirement)}");
             }
 
             this.energyRequirement = value;
@@ -38,9 +34,9 @@ public abstract class Harvester : Worker
 
         protected set
         {
-            if (value < minOreOutput)
+            if (value < Constants.MinOreOutput)
             {
-                throw new ArgumentException($"Harvester is not registered, because of it's OreOutput");
+                throw new ArgumentException($"Harvester is not registered, because of it's {nameof(OreOutput)}");
             }
 
             this.oreOutput = value;

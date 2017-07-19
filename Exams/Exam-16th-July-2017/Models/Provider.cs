@@ -3,9 +3,6 @@ using System.Text;
 
 public abstract class Provider : Worker
 {
-    private const double minEnergyOutput = 0;
-    private const double maxEnergyOutput = 10000;
-
     private double energyOutput;
 
     protected Provider(string id, double energyOutput)
@@ -20,9 +17,9 @@ public abstract class Provider : Worker
 
         protected set
         {
-            if (value < minEnergyOutput || value > maxEnergyOutput)
+            if (value < Constants.MinEnergyOutput || value > Constants.MaxEnergyOutput)
             {
-                throw new ArgumentException($"Provider is not registered, because of it's EnergyOutput");
+                throw new ArgumentException($"Provider is not registered, because of it's {nameof(EnergyOutput)}");
             }
 
             this.energyOutput = value;

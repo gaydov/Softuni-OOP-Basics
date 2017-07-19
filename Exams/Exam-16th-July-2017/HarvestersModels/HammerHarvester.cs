@@ -2,9 +2,6 @@
 
 public class HammerHarvester : Harvester
 {
-    private const double orePercentIncrease = 200 / 100.0;
-    private const double energyPercentIncrease = 100 / 100.0;
-
     public HammerHarvester(string id, double oreOutput, double energyRequirement)
         : base(id, oreOutput, energyRequirement)
     {
@@ -19,7 +16,7 @@ public class HammerHarvester : Harvester
 
         protected set
         {
-            base.OreOutput = value + value * orePercentIncrease;
+            base.OreOutput = value + value * Constants.OrePercentIncrease;
         }
     }
 
@@ -32,7 +29,7 @@ public class HammerHarvester : Harvester
 
         protected set
         {
-            base.EnergyRequirement = value + value * energyPercentIncrease;
+            base.EnergyRequirement = value + value * Constants.EnergyPercentIncrease;
         }
     }
 

@@ -5,10 +5,6 @@ using System.Text;
 
 public class DraftManager
 {
-    private const string initialSystemMode = "Full";
-    private const double halfModeEnergyPercentage = 60 / 100.0;
-    private const double halfModeMinedOrePercentage = 50 / 100.0;
-
     private readonly Dictionary<string, Harvester> harvesters;
     private readonly Dictionary<string, Provider> providers;
     private double totalStoredEnergy;
@@ -21,7 +17,7 @@ public class DraftManager
         this.providers = new Dictionary<string, Provider>();
         this.totalStoredEnergy = 0;
         this.totalMinedOre = 0;
-        this.modeType = initialSystemMode;
+        this.modeType = Constants.InitialSystemMode;
     }
 
     public string RegisterHarvester(List<string> arguments)
@@ -75,8 +71,8 @@ public class DraftManager
 
             case "Half":
 
-                requiredEnergyPerMode = this.harvesters.Values.Sum(h => h.EnergyRequirement * halfModeEnergyPercentage);
-                minedOrePerMode = this.harvesters.Values.Sum(h => h.OreOutput * halfModeMinedOrePercentage);
+                requiredEnergyPerMode = this.harvesters.Values.Sum(h => h.EnergyRequirement * Constants.HalfModeEnergyPercentage);
+                minedOrePerMode = this.harvesters.Values.Sum(h => h.OreOutput * Constants.HalfModeMinedOrePercentage);
                 break;
         }
 
@@ -125,7 +121,6 @@ public class DraftManager
         }
 
         return $"No element found with id - {id}";
-
     }
 
     public string ShutDown()
