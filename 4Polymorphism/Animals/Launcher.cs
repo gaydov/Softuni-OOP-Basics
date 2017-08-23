@@ -6,7 +6,7 @@ namespace Animals
     {
         public static void Main()
         {
-            Animal cat = new Cat("Pesho", "Whiskas");
+            Animal cat = new Cat("Pesho", "Whiskas2");
             Animal dog = new Dog("Gosho", "Meat");
 
             Console.WriteLine(cat.ExplainMyself());
