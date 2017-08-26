@@ -73,9 +73,9 @@ public class CarManager
 
     public void Participate(int carId, int raceId)
     {
-        if (!Garage.ParkedCars.Contains(Cars[carId]))
+        if (!Garage.ParkedCars.Contains(this.Cars[carId]))
         {
-            if (!ClosedRacesIds.Contains(raceId))
+            if (!this.ClosedRacesIds.Contains(raceId))
             {
                 this.Races[raceId].AddParticipant(carId, this.Cars[carId]);
             }
@@ -95,7 +95,7 @@ public class CarManager
 
     public void Park(int id)
     {
-        foreach (KeyValuePair<int, Race> race in Races.Where(r => !ClosedRacesIds.Contains(r.Key)))
+        foreach (KeyValuePair<int, Race> race in this.Races.Where(r => !this.ClosedRacesIds.Contains(r.Key)))
         {
             if (race.Value.Participants.ContainsKey(id))
             {
@@ -103,12 +103,12 @@ public class CarManager
             }
         }
 
-        this.Garage.ParkedCars.Add(Cars[id]);
+        this.Garage.ParkedCars.Add(this.Cars[id]);
     }
 
     public void Unpark(int id)
     {
-        this.Garage.ParkedCars.Remove(Cars[id]);
+        this.Garage.ParkedCars.Remove(this.Cars[id]);
     }
 
     public void Tune(int tuneIndex, string addOn)

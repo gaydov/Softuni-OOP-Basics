@@ -12,4 +12,3 @@ public class RegisterHarvesterCommand : Command
         return this.Manager.RegisterHarvester(this.Args);
     }
 }
-

@@ -16,7 +16,7 @@ public class PressureProvider : Provider
 
         protected set
         {
-            base.EnergyOutput = value + value * Constants.PercentIncreaseEnergy;
+            base.EnergyOutput = value + (value * Constants.PercentIncreaseEnergy);
         }
     }
 

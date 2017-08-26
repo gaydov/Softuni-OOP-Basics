@@ -15,7 +15,10 @@ public abstract class Harvester : Worker
 
     public virtual double EnergyRequirement
     {
-        get { return this.energyRequirement; }
+        get
+        {
+            return this.energyRequirement;
+        }
 
         protected set
         {
@@ -30,7 +33,10 @@ public abstract class Harvester : Worker
 
     public virtual double OreOutput
     {
-        get { return this.oreOutput; }
+        get
+        {
+            return this.oreOutput;
+        }
 
         protected set
         {

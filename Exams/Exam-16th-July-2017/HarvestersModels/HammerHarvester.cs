@@ -16,7 +16,7 @@ public class HammerHarvester : Harvester
 
         protected set
         {
-            base.OreOutput = value + value * Constants.OrePercentIncrease;
+            base.OreOutput = value + (value * Constants.OrePercentIncrease);
         }
     }
 
@@ -29,7 +29,7 @@ public class HammerHarvester : Harvester
 
         protected set
         {
-            base.EnergyRequirement = value + value * Constants.EnergyPercentIncrease;
+            base.EnergyRequirement = value + (value * Constants.EnergyPercentIncrease);
         }
     }
 

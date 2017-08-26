@@ -12,4 +12,3 @@ public class CheckStatusCommand : Command
         return this.Manager.Check(this.Args);
     }
 }
-

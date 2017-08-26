@@ -18,4 +18,3 @@
     internal const double HalfModeEnergyPercentage = 60 / 100.0;
     internal const double HalfModeMinedOrePercentage = 50 / 100.0;
 }
-

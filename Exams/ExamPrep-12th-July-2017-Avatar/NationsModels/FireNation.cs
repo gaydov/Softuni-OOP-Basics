@@ -1,8 +1,7 @@
-﻿
-    public class FireNation : Nation
+﻿public class FireNation : Nation
+{
+    public FireNation(string name)
+    : base(name)
     {
-        public FireNation(string name) 
-        : base(name)
-        {
-        }
     }
+}

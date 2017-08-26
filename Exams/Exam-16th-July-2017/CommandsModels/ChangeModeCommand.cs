@@ -12,4 +12,3 @@ public class ChangeModeCommand : Command
         return this.Manager.Mode(this.Args);
     }
 }
-

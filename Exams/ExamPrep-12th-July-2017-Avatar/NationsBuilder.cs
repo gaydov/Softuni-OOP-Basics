@@ -95,7 +95,7 @@ public class NationsBuilder
 
     public void IssueWar(string nationsType)
     {
-        Nation[] nationsArray = new Nation[] { airNation, fireNation, earthNation, waterNation };
+        Nation[] nationsArray = new Nation[] { this.airNation, this.fireNation, this.earthNation, this.waterNation };
         
         Nation[] losingNations = nationsArray.OrderByDescending(n => n.GetTotalPower()).Skip(1).ToArray();
 
@@ -105,7 +105,7 @@ public class NationsBuilder
             nation.Monuments.Clear();
         }
 
-        warStarters.Add(nationsType);
+        this.warStarters.Add(nationsType);
     }
 
     public string GetWarsRecord()
@@ -113,7 +113,7 @@ public class NationsBuilder
         StringBuilder sb = new StringBuilder();
         int number = 1;
 
-        for (int i = 0; i < warStarters.Count; i++)
+        for (int i = 0; i < this.warStarters.Count; i++)
         {
             sb.AppendLine($"War {number} issued by {warStarters[i]}");
             number++;

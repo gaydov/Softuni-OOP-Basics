@@ -12,4 +12,3 @@ public class RegisterProviderCommand : Command
         return this.Manager.RegisterProvider(this.Args);
     }
 }
-

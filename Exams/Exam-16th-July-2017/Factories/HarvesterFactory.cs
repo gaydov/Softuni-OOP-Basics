@@ -25,4 +25,3 @@ public class HarvesterFactory
         throw new ArgumentException("Invalid harvester type.");
     }
 }
-

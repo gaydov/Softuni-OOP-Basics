@@ -46,7 +46,7 @@ public abstract class Race
 
         foreach (KeyValuePair<int, int> winner in winners)
         {
-            Car currentCar = Participants[winner.Key];
+            Car currentCar = this.Participants[winner.Key];
 
             sb.AppendLine(
                 $"{position}. {currentCar.Brand} {currentCar.Model} {winner.Value}PP - ${GeneratePrizes()[position - 1]}");

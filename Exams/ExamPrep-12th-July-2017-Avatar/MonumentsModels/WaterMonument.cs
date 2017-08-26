@@ -1,5 +1,4 @@
-﻿
-public class WaterMonument : Monument
+﻿public class WaterMonument : Monument
 {
     public WaterMonument(string name, int waterAffinity)
         : base(name)
@@ -19,4 +18,3 @@ public class WaterMonument : Monument
         return this.WaterAffinity;
     }
 }
-

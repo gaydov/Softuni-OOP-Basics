@@ -16,10 +16,8 @@ public class ProviderFactory
 
             case "Solar":
                 return new SolarProvider(id, energyOutput);
-
         }
 
         throw new ArgumentException("Invalid provider type.");
     }
 }
-

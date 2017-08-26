@@ -29,7 +29,6 @@ public class DraftManager
         {
             this.harvesters.Add(id, HarvesterFactory.GenerateHarvester(arguments));
             return $"Successfully registered {type} Harvester - {id}";
-
         }
         catch (ArgumentException ae)
         {
@@ -47,7 +46,6 @@ public class DraftManager
             this.providers.Add(id, ProviderFactory.GenerateProvider(arguments));
             return $"Successfully registered {type} Provider - {id}";
         }
-
         catch (ArgumentException ae)
         {
             return ae.Message;
@@ -78,7 +76,8 @@ public class DraftManager
 
         this.totalStoredEnergy += dailyProvidedEnergy;
 
-        if (!this.modeType.Equals("Energy")) // In "Energy" mode there is no mining, only the providers work
+        // In "Energy" mode there is no mining, only the providers work
+        if (!this.modeType.Equals("Energy")) 
         {
             // Mining process
             if (requiredEnergyPerMode <= this.totalStoredEnergy)
@@ -110,14 +109,14 @@ public class DraftManager
     {
         string id = arguments[0];
 
-        if (harvesters.ContainsKey(id))
+        if (this.harvesters.ContainsKey(id))
         {
-            return harvesters[id].ToString();
+            return this.harvesters[id].ToString();
         }
 
-        if (providers.ContainsKey(id))
+        if (this.providers.ContainsKey(id))
         {
-            return providers[id].ToString();
+            return this.providers[id].ToString();
         }
 
         return $"No element found with id - {id}";

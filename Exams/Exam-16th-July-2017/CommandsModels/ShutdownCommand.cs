@@ -12,4 +12,3 @@ public class ShutdownCommand : Command
         return this.Manager.ShutDown();
     }
 }
-

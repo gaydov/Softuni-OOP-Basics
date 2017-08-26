@@ -13,7 +13,10 @@ public abstract class Provider : Worker
 
     public virtual double EnergyOutput
     {
-        get { return this.energyOutput; }
+        get
+        {
+            return this.energyOutput;
+        }
 
         protected set
         {
