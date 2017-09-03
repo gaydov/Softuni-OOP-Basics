@@ -10,6 +10,16 @@ namespace BashSoft.IO.Commands
         {
         }
 
+        public override void Execute()
+        {
+            if (this.Data.Length != 1)
+            {
+                throw new InvalidCommandException(this.Input);
+            }
+
+            this.DisplayHelp();
+        }
+
         private void DisplayHelp()
         {
             OutputWriter.WriteMessageOnNewLine($"{new string('_', 100)}");
@@ -26,16 +36,6 @@ namespace BashSoft.IO.Commands
             OutputWriter.WriteMessageOnNewLine(string.Format("|{0, -98}|", "get help – help"));
             OutputWriter.WriteMessageOnNewLine($"{new string('_', 100)}");
             OutputWriter.WriteEmptyLine();
-        }
-
-        public override void Execute()
-        {
-            if (this.Data.Length != 1)
-            {
-                throw new InvalidCommandException(this.Input);
-            }
-
-            this.DisplayHelp();
         }
     }
 }

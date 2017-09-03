@@ -3,7 +3,5 @@
     public Mushrooms()
         : base(-10)
     {
-
     }
 }
-

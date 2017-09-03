@@ -1,5 +1,4 @@
-﻿
-public class Car : Vehicle
+﻿public class Car : Vehicle
 {
     private const double ACFuelIncrease = 0.9;
 

@@ -15,7 +15,10 @@ public class Team
 
     public string Name
     {
-        get { return this.name; }
+        get
+        {
+            return this.name;
+        }
 
         private set
         {
@@ -28,22 +31,12 @@ public class Team
         }
     }
 
+    public int Rating => this.CalcTeamRating();
+
     private Dictionary<string, Player> Players
     {
         get { return this.players; }
         set { this.players = value; }
-    }
-
-    public int Rating => CalcTeamRating();
-
-    private int CalcTeamRating()
-    {
-        if (this.players.Count > 0)
-        {
-            int result = (int)Math.Round(this.Players.Values.Average(p => p.Stats));
-            return result;
-        }
-        return 0;
     }
 
     public void RemovePlayer(string playerName)
@@ -65,5 +58,15 @@ public class Team
     {
         return $"{this.name} - {this.Rating}";
     }
-}
 
+    private int CalcTeamRating()
+    {
+        if (this.players.Count > 0)
+        {
+            int result = (int)Math.Round(this.Players.Values.Average(p => p.Stats));
+            return result;
+        }
+
+        return 0;
+    }
+}

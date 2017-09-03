@@ -9,13 +9,11 @@ namespace BashSoft.Exceptions
         public DuplicateEntryInStructureException(string message)
             : base(message)
         {
-
         }
 
         public DuplicateEntryInStructureException(string entry, string structure)
             : base(string.Format(DuplicateEntry, entry, structure))
         {
-
         }
     }
 }

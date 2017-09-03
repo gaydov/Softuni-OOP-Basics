@@ -12,6 +12,21 @@ namespace BashSoft.IO.Commands
         {
         }
 
+        public override void Execute()
+        {
+            if (this.Data.Length != 5)
+            {
+                throw new InvalidCommandException(this.Input);
+            }
+
+            string courseName = Data[1];
+            string orderType = Data[2].ToLower();
+            string orderCommand = Data[3].ToLower();
+            string orderQuantity = Data[4].ToLower();
+
+            this.TryParseParametersForOrderAndTake(orderCommand, orderQuantity, courseName, orderType);
+        }
+
         private void TryParseParametersForOrderAndTake(string orderCommand, string orderQuantity, string courseName, string orderType)
         {
             if (orderCommand.Equals("take"))
@@ -38,21 +53,6 @@ namespace BashSoft.IO.Commands
             {
                 throw new ArgumentException(ExceptionMessages.InvalidTakeCommand);
             }
-        }
-
-        public override void Execute()
-        {
-            if (this.Data.Length != 5)
-            {
-                throw new InvalidCommandException(this.Input);
-            }
-
-            string courseName = Data[1];
-            string orderType = Data[2].ToLower();
-            string orderCommand = Data[3].ToLower();
-            string orderQuantity = Data[4].ToLower();
-
-            this.TryParseParametersForOrderAndTake(orderCommand, orderQuantity, courseName, orderType);
         }
     }
 }

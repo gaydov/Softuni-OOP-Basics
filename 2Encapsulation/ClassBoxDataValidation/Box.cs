@@ -6,9 +6,19 @@ public class Box
     private double width;
     private double height;
 
+    public Box(double length, double width, double height)
+    {
+        this.Length = length;
+        this.Width = width;
+        this.Height = height;
+    }
+
     public double Length
     {
-        get { return this.length; }
+        get
+        {
+            return this.length;
+        }
 
         private set
         {
@@ -20,9 +30,13 @@ public class Box
             this.length = value;
         }
     }
+
     public double Width
     {
-        get { return this.width; }
+        get
+        {
+            return this.width;
+        }
 
         private set
         {
@@ -34,9 +48,13 @@ public class Box
             this.width = value;
         }
     }
+
     public double Height
     {
-        get { return this.height; }
+        get
+        {
+            return this.height;
+        }
 
         private set
         {
@@ -47,13 +65,6 @@ public class Box
 
             this.height = value;
         }
-    }
-
-    public Box(double length, double width, double height)
-    {
-        this.Length = length;
-        this.Width = width;
-        this.Height = height;
     }
 
     public double GetSurfaceArea()
@@ -71,4 +82,3 @@ public class Box
         return this.length * this.width * this.height;
     }
 }
-

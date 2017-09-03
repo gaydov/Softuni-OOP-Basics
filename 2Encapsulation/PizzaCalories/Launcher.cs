@@ -60,7 +60,6 @@ namespace PizzaCalories
                         Console.WriteLine(e.Message);
                         return;
                     }
-
                 }
 
                 input = Console.ReadLine();

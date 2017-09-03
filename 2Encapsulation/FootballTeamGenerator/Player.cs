@@ -23,7 +23,10 @@ public class Player
 
     public string Name
     {
-        get { return this.name; }
+        get
+        {
+            return this.name;
+        }
 
         private set
         {
@@ -36,9 +39,36 @@ public class Player
         }
     }
 
+    public int Stats
+    {
+        get { return this.stats; }
+        private set { this.stats = value; }
+    }
+
+    private int Passing
+    {
+        get
+        {
+            return this.passing;
+        }
+
+        set
+        {
+            if (value < 0 || value > 100)
+            {
+                throw new ArgumentException($"{nameof(Passing)} should be between 0 and 100.");
+            }
+
+            this.passing = value;
+        }
+    }
+
     private int Endurance
     {
-        get { return this.endurance; }
+        get
+        {
+            return this.endurance;
+        }
 
         set
         {
@@ -53,7 +83,10 @@ public class Player
 
     private int Sprint
     {
-        get { return this.sprint; }
+        get
+        {
+            return this.sprint;
+        }
 
         set
         {
@@ -68,7 +101,10 @@ public class Player
 
     private int Dribble
     {
-        get { return this.dribble; }
+        get
+        {
+            return this.dribble;
+        }
 
         set
         {
@@ -81,24 +117,12 @@ public class Player
         }
     }
 
-    private int Passing
-    {
-        get { return this.passing; }
-
-        set
-        {
-            if (value < 0 || value > 100)
-            {
-                throw new ArgumentException($"{nameof(Passing)} should be between 0 and 100.");
-            }
-
-            this.passing = value;
-        }
-    }
-
     private int Shooting
     {
-        get { return this.shooting; }
+        get
+        {
+            return this.shooting;
+        }
 
         set
         {
@@ -111,16 +135,9 @@ public class Player
         }
     }
 
-    public int Stats
-    {
-        get { return this.stats; }
-        private set { this.stats = value; }
-    }
-
     private int CaclPlayerStats()
     {
         int result = (int)Math.Round((this.Endurance + this.Dribble + this.Passing + this.Shooting + this.Sprint) / 5.0);
         return result;
     }
 }
-

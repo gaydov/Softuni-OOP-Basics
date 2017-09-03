@@ -1,5 +1,4 @@
-﻿
-public class Engine
+﻿public class Engine
 {
     private string model;
     private string power;
@@ -20,7 +19,11 @@ public class Engine
 
     public string Displacement
     {
-        get { return this.displacement; }
+        get
+        {
+            return this.displacement;
+        }
+
         set
         {
             if (value == null)
@@ -36,7 +39,11 @@ public class Engine
 
     public string Efficiency
     {
-        get { return this.efficiency; }
+        get
+        {
+            return this.efficiency;
+        }
+
         set
         {
             if (value == null)
@@ -52,7 +59,6 @@ public class Engine
 
     public override string ToString()
     {
-        return $"";
+        return string.Empty;
     }
 }
-

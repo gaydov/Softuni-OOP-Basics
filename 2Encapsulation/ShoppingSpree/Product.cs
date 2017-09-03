@@ -13,7 +13,10 @@ public class Product
 
     public string Name
     {
-        get { return this.name; }
+        get
+        {
+            return this.name;
+        }
 
         set
         {
@@ -28,7 +31,10 @@ public class Product
 
     public decimal Cost
     {
-        get { return this.cost; }
+        get
+        {
+            return this.cost;
+        }
 
         set
         {
@@ -41,4 +47,3 @@ public class Product
         }
     }
 }
-

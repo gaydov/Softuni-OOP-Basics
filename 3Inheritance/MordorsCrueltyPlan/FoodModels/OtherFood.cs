@@ -3,6 +3,5 @@
     public OtherFood()
     : base(-1)
     {
-
     }
 }

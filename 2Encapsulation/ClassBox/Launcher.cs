@@ -14,7 +14,7 @@ namespace ClassBox
 
             double inputLength = double.Parse(Console.ReadLine());
             double inputWidth = double.Parse(Console.ReadLine());
-            double inputHeight= double.Parse(Console.ReadLine());
+            double inputHeight = double.Parse(Console.ReadLine());
 
             Box box = new Box(inputLength, inputWidth, inputHeight);
             Console.WriteLine($"Surface Area - {box.GetSurfaceArea():F2}");

@@ -37,4 +37,3 @@
         set { this.salary = value; }
     }
 }
-

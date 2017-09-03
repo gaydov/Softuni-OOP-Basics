@@ -3,7 +3,5 @@
     public Cram()
         : base(2)
     {
-
     }
 }
-

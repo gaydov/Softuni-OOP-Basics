@@ -24,49 +24,65 @@
 
     public int Seconds
     {
-        get { return seconds; }
+        get
+        {
+            return this.seconds;
+        }
+
         private set
         {
             if (value < SecsMin || value > SecsMax)
             {
                 throw new InvalidSongSecondsException();
             }
+
             this.seconds = value;
         }
     }
 
-
     public int Minutes
     {
-        get { return minutes; }
+        get
+        {
+            return this.minutes;
+        }
+
         private set
         {
             if (value < MinsMin || value > MinsMax)
             {
                 throw new InvalidSongMinutesException();
             }
+
             this.minutes = value;
         }
     }
 
-
     public string Name
     {
-        get { return name; }
+        get
+        {
+            return this.name;
+        }
+
         private set
         {
             if (value.Length < NameLenMin || value.Length > NameLenMax)
             {
                 throw new InvalidSongNameException();
             }
+
             this.name = value;
         }
     }
 
-
     public string ArtistName
     {
-        get { return artistName; }
+        get
+        {
+            return this.artistName;
+        }
+
         private set
         {
             if (value.Length < ArtistNameMin || value.Length > ArtistNameMax)
@@ -78,4 +94,3 @@
         }
     }
 }
-

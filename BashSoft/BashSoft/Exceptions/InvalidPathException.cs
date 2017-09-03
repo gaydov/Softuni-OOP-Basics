@@ -7,15 +7,13 @@ namespace BashSoft.Exceptions
         private const string InvalidPath = "The source does not exist.";
 
         public InvalidPathException()
-            :base(InvalidPath)
+            : base(InvalidPath)
         {
-            
         }
 
         public InvalidPathException(string message)
             : base(message)
         {
-
         }
     }
 }

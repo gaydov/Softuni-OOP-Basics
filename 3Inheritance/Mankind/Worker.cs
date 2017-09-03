@@ -15,20 +15,29 @@ public class Worker : Human
 
     public decimal WeekSalary
     {
-        get { return this.weekSalary; }
+        get
+        {
+            return this.weekSalary;
+        }
+
         private set
         {
             if (value <= 10)
             {
                 throw new ArgumentException("Expected value mismatch! Argument: weekSalary");
             }
+
             this.weekSalary = value;
         }
     }
 
     public decimal WorkHoursPerDay
     {
-        get { return this.workHoursPerDay; }
+        get
+        {
+            return this.workHoursPerDay;
+        }
+
         private set
         {
             if (value < 1 || value > 12)
@@ -38,11 +47,6 @@ public class Worker : Human
 
             this.workHoursPerDay = value;
         }
-    }
-
-    private decimal CalcSalaryPerHour()
-    {
-        return weekSalary / (5m * workHoursPerDay);
     }
 
     public override string ToString()
@@ -55,5 +59,9 @@ public class Worker : Human
 
         return sb.ToString();
     }
-}
 
+    private decimal CalcSalaryPerHour()
+    {
+        return this.weekSalary / (5m * this.workHoursPerDay);
+    }
+}

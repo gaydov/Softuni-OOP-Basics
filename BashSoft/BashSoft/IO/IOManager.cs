@@ -19,10 +19,12 @@ namespace BashSoft.IO
             {
                 string currentPath = subFolders.Dequeue();
                 int identation = currentPath.Split('\\').Length - initialIdentation;
+
                 if (depth - identation < 0)
                 {
                     break;
                 }
+
                 OutputWriter.WriteMessageOnNewLine(string.Format("{0}{1}", new string('-', identation), currentPath));
 
                 try
@@ -59,7 +61,6 @@ namespace BashSoft.IO
             {
                 throw new InvalidFileNameException();
             }
-
         }
 
         public void ChangeCurrentDirectoryRelative(string relativePath)
@@ -82,7 +83,7 @@ namespace BashSoft.IO
             {
                 string currentPath = SessionData.currentPath;
                 currentPath += "\\" + relativePath;
-                ChangeCurrentDirectoryAbsolute(currentPath);
+                this.ChangeCurrentDirectoryAbsolute(currentPath);
             }
         }
 
@@ -92,6 +93,7 @@ namespace BashSoft.IO
             {
                 throw new InvalidPathException();
             }
+
             SessionData.currentPath = absolutePath;
         }
     }

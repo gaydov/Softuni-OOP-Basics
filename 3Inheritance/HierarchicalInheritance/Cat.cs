@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 public class Cat : Animal
 {
@@ -8,4 +7,3 @@ public class Cat : Animal
         Console.WriteLine("meowing...");
     }
 }
-

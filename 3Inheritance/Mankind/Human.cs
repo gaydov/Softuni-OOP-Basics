@@ -14,7 +14,11 @@ public class Human
 
     protected string FirstName
     {
-        get { return this.firstName; }
+        get
+        {
+            return this.firstName;
+        }
+
         set
         {
             if (!char.IsUpper(value[0]))
@@ -33,7 +37,11 @@ public class Human
 
     protected string LastName
     {
-        get { return this.lastName; }
+        get
+        {
+            return this.lastName;
+        }
+
         set
         {
             if (!char.IsUpper(value[0]))
@@ -59,4 +67,3 @@ public class Human
         return sb.ToString();
     }
 }
-

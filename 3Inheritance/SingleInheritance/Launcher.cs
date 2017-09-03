@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SingleInheritance
+﻿namespace SingleInheritance
 {
     public class Launcher
     {

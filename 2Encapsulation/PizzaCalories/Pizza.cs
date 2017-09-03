@@ -17,7 +17,11 @@ public class Pizza
 
     public string Name
     {
-        get { return this.name; }
+        get
+        {
+            return this.name;
+        }
+
         private set
         {
             if (string.IsNullOrEmpty(value) || value.Length > 15)
@@ -29,11 +33,6 @@ public class Pizza
         }
     }
 
-    private List<Topping> Toppings
-    {
-        set { this.toppings = value; }
-    }
-
     public Dough Dough
     {
         set { this.dough = value; }
@@ -41,7 +40,10 @@ public class Pizza
 
     public int ToppingsCount
     {
-        get { return this.toppingsCount; }
+        get
+        {
+            return this.toppingsCount;
+        }
 
         set
         {
@@ -52,6 +54,11 @@ public class Pizza
 
             this.toppingsCount = value;
         }
+    }
+
+    private List<Topping> Toppings
+    {
+        set { this.toppings = value; }
     }
 
     public void AddToping(string type, double weight)
@@ -72,4 +79,3 @@ public class Pizza
         return sum;
     }
 }
-

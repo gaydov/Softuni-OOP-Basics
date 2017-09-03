@@ -21,6 +21,7 @@ public class Person
         {
             return this.firstName;
         }
+
         set
         {
             if (value.Length < 3)
@@ -38,6 +39,7 @@ public class Person
         {
             return this.lastName;
         }
+
         set
         {
             if (value.Length < 3)
@@ -51,7 +53,10 @@ public class Person
 
     public int Age
     {
-        get { return this.age; }
+        get
+        {
+            return this.age;
+        }
 
         set
         {
@@ -66,7 +71,11 @@ public class Person
 
     public double Salary
     {
-        get { return this.salary; }
+        get
+        {
+            return this.salary;
+        }
+
         set
         {
             if (value < 460.0)
@@ -93,4 +102,3 @@ public class Person
         }
     }
 }
-

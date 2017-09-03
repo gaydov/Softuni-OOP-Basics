@@ -8,4 +8,3 @@
         get { return $"Artist name should be between {MinLength} and {MaxLength} symbols."; }
     }
 }
-

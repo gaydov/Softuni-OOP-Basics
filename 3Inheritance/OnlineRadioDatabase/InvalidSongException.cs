@@ -7,4 +7,3 @@ public class InvalidSongException : Exception
         get { return "Invalid song."; }
     }
 }
-

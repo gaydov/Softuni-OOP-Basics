@@ -9,13 +9,11 @@ namespace BashSoft.Exceptions
         public CourseNotFoundException()
             : base(NotEnrolledInCourse)
         {
-
         }
 
         public CourseNotFoundException(string message)
             : base(message)
         {
-
         }
     }
 }

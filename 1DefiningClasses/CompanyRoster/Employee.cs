@@ -8,6 +8,14 @@
     private string email = "n/a";
     private int age = -1;
 
+    public Employee(string name, decimal salary, string position, string department)
+    {
+        this.name = name;
+        this.salary = salary;
+        this.position = position;
+        this.department = department;
+    }
+
     public string Name
     {
         get { return this.name; }
@@ -43,13 +51,4 @@
         get { return this.age; }
         set { this.age = value; }
     }
-
-    public Employee(string name, decimal salary, string position, string department)
-    {
-        this.name = name;
-        this.salary = salary;
-        this.position = position;
-        this.department = department;
-    }
 }
-

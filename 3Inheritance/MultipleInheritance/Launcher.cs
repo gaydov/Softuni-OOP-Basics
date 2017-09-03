@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MultipleInheritance
+﻿namespace MultipleInheritance
 {
     public class Launcher
     {

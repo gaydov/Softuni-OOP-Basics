@@ -24,7 +24,11 @@ namespace BashSoft.IO.Commands
 
         protected string Input
         {
-            get { return this.input; }
+            get
+            {
+                return this.input;
+            }
+
             private set
             {
                 if (string.IsNullOrEmpty(value))
@@ -38,7 +42,11 @@ namespace BashSoft.IO.Commands
 
         protected string[] Data
         {
-            get { return this.data; }
+            get
+            {
+                return this.data;
+            }
+
             private set
             {
                 if (value == null || value.Length == 0)

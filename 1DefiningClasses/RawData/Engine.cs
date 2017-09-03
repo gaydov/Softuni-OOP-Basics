@@ -1,5 +1,4 @@
-﻿
-public class Engine
+﻿public class Engine
 {
     private int engineSpeed = 0;
     private int enginePower = 0;
@@ -22,4 +21,3 @@ public class Engine
         set { this.enginePower = value; }
     }
 }
-

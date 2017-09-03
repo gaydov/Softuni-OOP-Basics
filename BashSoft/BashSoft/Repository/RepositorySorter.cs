@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BashSoft.IO;
 using BashSoft.StaticData;
 
 namespace BashSoft.Repository
@@ -20,7 +21,7 @@ namespace BashSoft.Repository
             }
             else if (comparison.Equals("descending"))
             {
-                PrintStudents(studentsMarks
+                this.PrintStudents(studentsMarks
                     .OrderByDescending(x => x.Value)
                     .Take(studentsToTake)
                     .ToDictionary(pair => pair.Key, pair => pair.Value));

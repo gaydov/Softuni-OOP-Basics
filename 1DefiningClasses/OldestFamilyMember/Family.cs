@@ -16,4 +16,3 @@ public class Family
         return this.people.FirstOrDefault(p => p.Age == oldestMemberAge);
     }
 }
-

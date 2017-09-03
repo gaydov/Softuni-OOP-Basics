@@ -21,7 +21,11 @@ public class Car
 
     public string Weight
     {
-        get { return this.weight; }
+        get
+        {
+            return this.weight;
+        }
+
         set
         {
             if (value == null)
@@ -37,7 +41,11 @@ public class Car
 
     public string Color
     {
-        get { return this.color; }
+        get
+        {
+            return this.color;
+        }
+
         set
         {
             if (value == null)

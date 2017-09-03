@@ -28,7 +28,6 @@ namespace CompanyRoster
                         currentEmployee.Email = input[4];
                     }
                 }
-
                 else if (input.Length == 6)
                 {
                     currentEmployee.Email = input[4];

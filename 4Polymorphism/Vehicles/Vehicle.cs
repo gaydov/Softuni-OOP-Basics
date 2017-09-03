@@ -1,5 +1,4 @@
-﻿
-public abstract class Vehicle
+﻿public abstract class Vehicle
 {
     private double fuelQuantity;
     private double fuelConsumptionPerKm;

@@ -2,12 +2,12 @@
 
 public class Circle : Shape
 {
-    private double Radius { get; set; }
-
     public Circle(double radius)
     {
         this.Radius = radius;
     }
+
+    private double Radius { get; set; }
 
     public override double CalculatePerimeter()
     {

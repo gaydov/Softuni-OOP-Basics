@@ -8,4 +8,3 @@
         get { return $"Song minutes should be between {MinLength} and {MaxLength}."; }
     }
 }
-

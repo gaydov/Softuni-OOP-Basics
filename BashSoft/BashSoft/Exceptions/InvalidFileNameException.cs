@@ -10,13 +10,11 @@ namespace BashSoft.Exceptions
         public InvalidFileNameException()
             : base(ForbiddenSymbolsContainedInName)
         {
-
         }
 
         public InvalidFileNameException(string message)
             : base(message)
         {
-
         }
     }
 }

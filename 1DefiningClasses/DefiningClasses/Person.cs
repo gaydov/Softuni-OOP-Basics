@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-class Person
+public class Person
 {
     private string name = string.Empty;
     private int age = 0;
@@ -24,4 +24,3 @@ class Person
         return this.accounts.Sum(a => a.Balance);
     }
 }
-

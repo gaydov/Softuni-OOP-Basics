@@ -1,5 +1,4 @@
-﻿
-public class Car
+﻿public class Car
 {
     private string model = string.Empty;
     private double fuelAmount = 0;
@@ -35,11 +34,11 @@ public class Car
     {
         if (this.fuelPerKm * distance <= this.fuelAmount)
         {
-            fuelAmount -= this.fuelPerKm * distance;
+            this.fuelAmount -= this.fuelPerKm * distance;
             this.distanceTraveled += distance;
             return true;
         }
+
         return false;
     }
 }
-

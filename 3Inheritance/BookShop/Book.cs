@@ -16,40 +16,56 @@ public class Book
 
     public virtual decimal Price
     {
-        get { return this.price; }
+        get
+        {
+            return this.price;
+        }
+
         protected set
         {
             if (value <= 0)
             {
                 throw new ArgumentException("Price not valid!");
             }
+
             this.price = value;
         }
     }
 
     public string Title
     {
-        get { return this.title; }
+        get
+        {
+            return this.title;
+        }
+
         protected set
         {
             if (value.Length < 3)
             {
                 throw new ArgumentException("Title not valid!");
             }
+
             this.title = value;
         }
     }
 
     public string Author
     {
-        get { return this.author; }
+        get
+        {
+            return this.author;
+        }
+
         protected set
         {
             int indexOfSpace = value.IndexOf(' ');
+
             if (char.IsDigit(value[indexOfSpace + 1]))
             {
                 throw new ArgumentException("Author not valid!");
             }
+
             this.author = value;
         }
     }
@@ -66,4 +82,3 @@ public class Book
         return sb.ToString();
     }
 }
-

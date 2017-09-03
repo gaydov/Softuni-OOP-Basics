@@ -10,15 +10,11 @@ namespace BashSoft.Exceptions
         public InvalidScoresCountException()
             : base(InvalidCount)
         {
-
         }
 
         public InvalidScoresCountException(string message)
             : base(message)
         {
-
         }
-
-
     }
 }

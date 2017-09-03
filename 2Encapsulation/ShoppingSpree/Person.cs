@@ -15,18 +15,12 @@ public class Person
         this.Bag = new List<Product>();
     }
 
-    public override string ToString()
-    {
-        if (this.bag.Count > 0)
-        {
-            return $"{this.name} - {string.Join(", ", this.bag.Select(product => product.Name))}";
-        }
-        return $"{this.name} - Nothing bought";
-    }
-
     public string Name
     {
-        get { return this.name; }
+        get
+        {
+            return this.name;
+        }
 
         private set
         {
@@ -41,7 +35,10 @@ public class Person
 
     public decimal Money
     {
-        get { return this.money; }
+        get
+        {
+            return this.money;
+        }
 
         set
         {
@@ -59,5 +56,14 @@ public class Person
         get { return this.bag; }
         set { this.bag = value; }
     }
-}
 
+    public override string ToString()
+    {
+        if (this.bag.Count > 0)
+        {
+            return $"{this.name} - {string.Join(", ", this.bag.Select(product => product.Name))}";
+        }
+
+        return $"{this.name} - Nothing bought";
+    }
+}

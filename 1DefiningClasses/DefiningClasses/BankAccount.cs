@@ -30,4 +30,3 @@
         return $"Account {this.id}, balance {this.balance}";
     }
 }
-

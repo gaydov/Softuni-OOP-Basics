@@ -2,6 +2,7 @@
 using BashSoft.Exceptions;
 using BashSoft.Repository;
 using BashSoft.SimpleJudge;
+using BashSoft.StaticData;
 
 namespace BashSoft.IO.Commands
 {

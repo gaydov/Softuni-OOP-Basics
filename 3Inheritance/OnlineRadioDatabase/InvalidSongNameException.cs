@@ -8,4 +8,3 @@
         get { return $"Song name should be between {MinLength} and {MaxLength} symbols."; }
     }
 }
-

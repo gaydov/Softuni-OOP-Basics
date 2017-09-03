@@ -1,5 +1,4 @@
-﻿
-public class Cargo
+﻿public class Cargo
 {
     private int cargoWeight = 0;
     private string cargoType = string.Empty;
@@ -22,4 +21,3 @@ public class Cargo
         set { this.cargoType = value; }
     }
 }
-

@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 public class Car
 {
@@ -17,13 +16,13 @@ public class Car
         this.tyres = new List<Tyre>();
 
         Tyre firstTyre = new Tyre(tyre1PS, tyre1Age);
-        tyres.Add(firstTyre);
+        this.tyres.Add(firstTyre);
         Tyre secondTyre = new Tyre(tyre2PS, tyre2Age);
-        tyres.Add(secondTyre);
+        this.tyres.Add(secondTyre);
         Tyre thirdTyre = new Tyre(tyre3PS, tyre3Age);
-        tyres.Add(thirdTyre);
+        this.tyres.Add(thirdTyre);
         Tyre fourthTyre = new Tyre(tyre4PS, tyre4Age);
-        tyres.Add(fourthTyre);
+        this.tyres.Add(fourthTyre);
     }
 
     public Cargo Cargo
@@ -50,4 +49,3 @@ public class Car
         set { this.engine = value; }
     }
 }
-

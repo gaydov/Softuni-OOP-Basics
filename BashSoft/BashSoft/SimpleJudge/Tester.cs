@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using BashSoft.IO;
 using BashSoft.StaticData;
 
 namespace BashSoft.SimpleJudge
@@ -11,16 +12,16 @@ namespace BashSoft.SimpleJudge
             try
             {
                 OutputWriter.WriteMessageOnNewLine("Reading files...");
-                string mismatchesPath = GetMismatchPath(secondPath);
+                string mismatchesPath = this.GetMismatchPath(secondPath);
 
                 string[] actualOutputLines = File.ReadAllLines(firstPath);
                 string[] expectedOutputLines = File.ReadAllLines(secondPath);
 
                 bool hasMismatch;
                 string[] mismatches =
-                    GetLineWithPossibleMismatches(actualOutputLines, expectedOutputLines, out hasMismatch);
+                    this.GetLineWithPossibleMismatches(actualOutputLines, expectedOutputLines, out hasMismatch);
 
-                PrintOutput(mismatches, hasMismatch, mismatchesPath);
+                this.PrintOutput(mismatches, hasMismatch, mismatchesPath);
                 OutputWriter.WriteMessageOnNewLine("Files read!");
             }
             catch (IOException ioEx)
@@ -59,6 +60,7 @@ namespace BashSoft.SimpleJudge
                 minOutputLines = Math.Min(actualOutputLines.Length, expectedOutputLines.Length);
                 OutputWriter.DisplayException(ExceptionMessages.ComparisonOfFilesWithDifferentSizes);
             }
+
             string[] mismatches = new string[minOutputLines];
 
             for (int index = 0; index < minOutputLines; index++)
@@ -81,6 +83,7 @@ namespace BashSoft.SimpleJudge
 
                 mismatches[index] = output;
             }
+
             return mismatches;
         }
 

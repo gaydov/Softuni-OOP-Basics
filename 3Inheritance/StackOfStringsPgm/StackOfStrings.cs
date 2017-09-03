@@ -33,4 +33,3 @@ public class StackOfStrings
         return this.data.Count == 0;
     }
 }
-

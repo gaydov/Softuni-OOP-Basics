@@ -12,6 +12,21 @@ namespace BashSoft.IO.Commands
         {
         }
 
+        public override void Execute()
+        {
+            if (Data.Length != 5)
+            {
+                throw new InvalidCommandException(this.Input);
+            }
+
+            string courseName = Data[1];
+            string filter = Data[2].ToLower();
+            string takeCommand = Data[3].ToLower();
+            string takeQuantity = Data[4].ToLower();
+
+            this.TryParseParametersForFilterAndTake(takeCommand, takeQuantity, courseName, filter);
+        }
+
         private void TryParseParametersForFilterAndTake(string takeCommand, string takeQuantity, string courseName, string filter)
         {
             if (takeCommand.Equals("take"))
@@ -38,21 +53,6 @@ namespace BashSoft.IO.Commands
             {
                 throw new ArgumentException(ExceptionMessages.InvalidTakeCommand);
             }
-        }
-
-        public override void Execute()
-        {
-            if (Data.Length != 5)
-            {
-                throw new InvalidCommandException(this.Input);
-            }
-
-            string courseName = Data[1];
-            string filter = Data[2].ToLower();
-            string takeCommand = Data[3].ToLower();
-            string takeQuantity = Data[4].ToLower();
-
-            this.TryParseParametersForFilterAndTake(takeCommand, takeQuantity, courseName, filter);
         }
     }
 }

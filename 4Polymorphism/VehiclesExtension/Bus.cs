@@ -33,4 +33,3 @@ public class Bus : Vehicle
         return base.TryTravel(distance);
     }
 }
-

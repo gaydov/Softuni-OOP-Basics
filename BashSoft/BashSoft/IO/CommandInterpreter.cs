@@ -1,8 +1,8 @@
 ﻿using System;
-using BashSoft.Repository;
-using BashSoft.SimpleJudge;
 using BashSoft.Exceptions;
 using BashSoft.IO.Commands;
+using BashSoft.Repository;
+using BashSoft.SimpleJudge;
 
 namespace BashSoft.IO
 {
@@ -45,26 +45,21 @@ namespace BashSoft.IO
                 case "mkdir":
                     return new MakeDirectoryCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "ls":
-                    return new TraverseFoldersCommand(input, data, this.judge, this.repository,
-                        this.inputOutputManager);
+                    return new TraverseFoldersCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "cmp":
                     return new CompareFilesCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "cdrel":
-                    return new ChangeRelativePathCommand(input, data, this.judge, this.repository,
-                        this.inputOutputManager);
+                    return new ChangeRelativePathCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "cdabs":
-                    return new ChangeAbsolutePathCommand(input, data, this.judge, this.repository,
-                        this.inputOutputManager);
+                    return new ChangeAbsolutePathCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "readdb":
                     return new ReadDatabaseCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "help":
                     return new GetHelpCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "filter":
-                    return new PrintFilteredStudentsCommand(input, data, this.judge, this.repository,
-                        this.inputOutputManager);
+                    return new PrintFilteredStudentsCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "order":
-                    return new PrintOrderedStudentsCommand(input, data, this.judge, this.repository,
-                        this.inputOutputManager);
+                    return new PrintOrderedStudentsCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "show":
                     return new ShowCourseCommand(input, data, this.judge, this.repository, this.inputOutputManager);
                 case "dropdb":

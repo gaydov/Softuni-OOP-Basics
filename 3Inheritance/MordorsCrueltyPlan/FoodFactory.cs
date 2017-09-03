@@ -24,8 +24,6 @@
 
             default:
                 return new OtherFood();
-
         }
     }
 }
-

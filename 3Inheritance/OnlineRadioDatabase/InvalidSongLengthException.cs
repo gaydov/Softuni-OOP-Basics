@@ -5,4 +5,3 @@
         get { return "Invalid song length."; }
     }
 }
-

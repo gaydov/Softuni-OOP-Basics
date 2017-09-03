@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using BashSoft.IO;
 using BashSoft.StaticData;
 
 namespace BashSoft.Repository
@@ -10,15 +11,15 @@ namespace BashSoft.Repository
         {
             if (wantedFilter.Equals("excellent"))
             {
-                FilterAndTake(studentsWithMarks, x => x >= 5.00, studentsToTake);
+                this.FilterAndTake(studentsWithMarks, x => x >= 5.00, studentsToTake);
             }
             else if (wantedFilter.Equals("average"))
             {
-                FilterAndTake(studentsWithMarks, x => 3.5 <= x && x < 5.00, studentsToTake);
+                this.FilterAndTake(studentsWithMarks, x => x >= 3.5 && x < 5.00, studentsToTake);
             }
             else if (wantedFilter.Equals("poor"))
             {
-                FilterAndTake(studentsWithMarks, x => x < 3.50, studentsToTake);
+                this.FilterAndTake(studentsWithMarks, x => x < 3.50, studentsToTake);
             }
             else
             {
@@ -45,7 +46,6 @@ namespace BashSoft.Repository
             }
         }
 
-
         private double Average(List<int> scoresOnTasks)
         {
             double totalScore = 0;
@@ -55,7 +55,7 @@ namespace BashSoft.Repository
             }
 
             double percentageOfAll = totalScore / (scoresOnTasks.Count * 100);
-            double mark = percentageOfAll * 4 + 2;
+            double mark = (percentageOfAll * 4) + 2;
 
             return mark;
         }

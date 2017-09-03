@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BashSoft
+namespace BashSoft.IO
 {
     public static class OutputWriter
     {

@@ -15,8 +15,7 @@ namespace DefineClassPerson
 
     public class Person
     {
-        public string name = String.Empty;
+        public string name = string.Empty;
         public int age = 0;
     }
 }
-

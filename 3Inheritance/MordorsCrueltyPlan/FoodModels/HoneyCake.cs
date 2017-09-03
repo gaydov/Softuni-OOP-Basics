@@ -3,6 +3,5 @@
     public HoneyCake()
         : base(5)
     {
-
     }
 }

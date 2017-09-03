@@ -16,7 +16,10 @@ public abstract class Animal : ProduceSound
 
     public string Name
     {
-        get { return this.name; }
+        get
+        {
+            return this.name;
+        }
 
         private set
         {
@@ -31,7 +34,10 @@ public abstract class Animal : ProduceSound
 
     public int Age
     {
-        get { return this.age; }
+        get
+        {
+            return this.age;
+        }
 
         private set
         {
@@ -46,7 +52,10 @@ public abstract class Animal : ProduceSound
 
     public string Gender
     {
-        get { return this.gender; }
+        get
+        {
+            return this.gender;
+        }
 
         private set
         {
@@ -69,4 +78,3 @@ public abstract class Animal : ProduceSound
         return sb.ToString();
     }
 }
-

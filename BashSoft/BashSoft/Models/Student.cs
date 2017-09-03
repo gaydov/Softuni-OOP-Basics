@@ -29,7 +29,10 @@ namespace BashSoft.Models
 
         public string UserName
         {
-            get { return this.userName; }
+            get
+            {
+                return this.userName;
+            }
 
             private set
             {
@@ -64,14 +67,14 @@ namespace BashSoft.Models
                 throw new InvalidScoresCountException();
             }
 
-            this.marksByCourseName.Add(courseName, CalculateMark(scores));
+            this.marksByCourseName.Add(courseName, this.CalculateMark(scores));
         }
 
         private double CalculateMark(int[] scores)
         {
             double percentageOfSolvedExam = scores.Sum() /
                 (double)(Course.NumberOfTasksOnExam * Course.MaxScoreOnExamTask);
-            double mark = percentageOfSolvedExam * 4 + 2;
+            double mark = (percentageOfSolvedExam * 4) + 2;
             return mark;
         }
     }

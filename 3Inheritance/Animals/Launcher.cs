@@ -46,7 +46,6 @@ namespace Animals
                         default:
                             Console.WriteLine("Invalid input!");
                             break;
-
                     }
                 }
                 catch (ArgumentException ae)

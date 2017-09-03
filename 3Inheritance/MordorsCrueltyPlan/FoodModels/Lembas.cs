@@ -1,9 +1,7 @@
 ﻿public class Lembas : Food
 {
     public Lembas()
-        :base(3)
+        : base(3)
     {
-        
     }
 }
-

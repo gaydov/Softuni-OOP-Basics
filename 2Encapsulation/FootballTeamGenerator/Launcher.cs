@@ -25,9 +25,7 @@ namespace FootballTeamGenerator
                             break;
 
                         case "Add":
-                            AddPlayerToTeam(teams, args[1], args[2],
-                                int.Parse(args[3]), int.Parse(args[4]), int.Parse(args[5]), int.Parse(args[6]), int.Parse(args[7])
-                            );
+                            AddPlayerToTeam(teams, args[1], args[2], int.Parse(args[3]), int.Parse(args[4]), int.Parse(args[5]), int.Parse(args[6]), int.Parse(args[7]));
                             break;
 
                         case "Remove":

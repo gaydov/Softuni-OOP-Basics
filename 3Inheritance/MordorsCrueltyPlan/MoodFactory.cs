@@ -15,7 +15,7 @@ public class MoodFactory
         {
             return new Sad();
         }
-        else if (1 <= summedIndexOfHappines && summedIndexOfHappines <= 15)
+        else if (summedIndexOfHappines >= 1 && summedIndexOfHappines <= 15)
         {
             return new Happy();
         }
@@ -25,4 +25,3 @@ public class MoodFactory
         }
     }
 }
-

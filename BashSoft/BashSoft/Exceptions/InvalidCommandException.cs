@@ -9,13 +9,11 @@ namespace BashSoft.Exceptions
         public InvalidCommandException()
             : base()
         {
-
         }
 
         public InvalidCommandException(string command)
             : base(string.Format(InvalidCommand, command))
         {
-
         }
     }
 }

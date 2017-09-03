@@ -37,6 +37,7 @@ public abstract class Vehicle
         {
             throw new ArgumentException("Fuel must be a positive number");
         }
+
         this.FuelQuantity += fuel;
     }
 

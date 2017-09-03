@@ -3,17 +3,18 @@ using System.Linq;
 
 public class Dough
 {
-    private string flourType;
-    private string bakingTechnique;
-    private double weight;
-
-    private readonly string[] allowedTypes = { "white", "wholegrain" };
-    private readonly string[] allowedTechniques = { "crispy", "chewy", "homemade" };
     private const double WhiteModifier = 1.5;
     private const double WholeGrainModifier = 1.0;
     private const double CrispyModifier = 0.9;
     private const double ChewyModifier = 1.1;
     private const double HomeMadeModifier = 1.0;
+
+    private readonly string[] allowedTypes = { "white", "wholegrain" };
+    private readonly string[] allowedTechniques = { "crispy", "chewy", "homemade" };
+
+    private string flourType;
+    private string bakingTechnique;
+    private double weight;
 
     public Dough(string flourType, string bakingTechnique, double weight)
     {
@@ -26,7 +27,7 @@ public class Dough
     {
         set
         {
-            if (!allowedTypes.Contains(value.ToLower()))
+            if (!this.allowedTypes.Contains(value.ToLower()))
             {
                 throw new ArgumentException("Invalid type of dough.");
             }
@@ -39,7 +40,7 @@ public class Dough
     {
         set
         {
-            if (!allowedTechniques.Contains(value.ToLower()))
+            if (!this.allowedTechniques.Contains(value.ToLower()))
             {
                 throw new ArgumentException("Invalid type of dough.");
             }
@@ -96,4 +97,3 @@ public class Dough
         return 2 * this.weight * flourModifier * bakingModifier;
     }
 }
-

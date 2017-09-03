@@ -11,12 +11,18 @@
         this.age = age;
     }
 
-    public string FirstName { get { return this.firstName; } }
-    public int Age { get { return this.age; } }
+    public string FirstName
+    {
+        get { return this.firstName; }
+    }
+
+    public int Age
+    {
+        get { return this.age; }
+    }
 
     public override string ToString()
     {
         return $"{this.firstName} {this.lastName} is a {this.age} years old";
     }
 }
-

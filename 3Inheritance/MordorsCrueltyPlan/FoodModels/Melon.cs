@@ -3,7 +3,5 @@
     public Melon()
         : base(1)
     {
-
     }
 }
-

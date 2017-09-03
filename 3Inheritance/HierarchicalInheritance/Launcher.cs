@@ -1,12 +1,9 @@
-﻿using System;
-
-namespace HierarchicalInheritance
+﻿namespace HierarchicalInheritance
 {
     public class Launcher
     {
         public static void Main()
         {
-
         }
     }
 }

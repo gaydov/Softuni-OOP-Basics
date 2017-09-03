@@ -13,4 +13,3 @@
         set { this.pointsOfHappiness = value; }
     }
 }
-

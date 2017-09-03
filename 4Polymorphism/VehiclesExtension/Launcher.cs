@@ -12,8 +12,7 @@ namespace VehiclesExtension
             int commandsCount = int.Parse(Console.ReadLine());
 
             Vehicle car = new Car(double.Parse(carInfo[1]), double.Parse(carInfo[2]), double.Parse(carInfo[3]));
-            Vehicle truck = new Truck(double.Parse(truckInfo[1]), double.Parse(truckInfo[2]),
-                double.Parse(truckInfo[3]));
+            Vehicle truck = new Truck(double.Parse(truckInfo[1]), double.Parse(truckInfo[2]), double.Parse(truckInfo[3]));
             Vehicle bus = new Bus(double.Parse(busInfo[1]), double.Parse(busInfo[2]), double.Parse(busInfo[3]));
 
             for (int i = 0; i < commandsCount; i++)

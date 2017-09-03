@@ -25,33 +25,34 @@ namespace CreatingConstructors
             Person personWithAge = (Person)ageCtor.Invoke(new object[] { age });
             Person personWithAgeAndName = swapped ? (Person)nameAgeCtor.Invoke(new object[] { age, name }) : (Person)nameAgeCtor.Invoke(new object[] { name, age });
 
-            Console.WriteLine("{0} {1}", basePerson.name, basePerson.age);
-            Console.WriteLine("{0} {1}", personWithAge.name, personWithAge.age);
-            Console.WriteLine("{0} {1}", personWithAgeAndName.name, personWithAgeAndName.age);
+            Console.WriteLine("{0} {1}", basePerson.Name, basePerson.Age);
+            Console.WriteLine("{0} {1}", personWithAge.Name, personWithAge.Age);
+            Console.WriteLine("{0} {1}", personWithAgeAndName.Name, personWithAgeAndName.Age);
         }
     }
 
     public class Person
     {
-        public string name = String.Empty;
-        public int age = 0;
-
         public Person()
         {
-            this.name = "No name";
-            this.age = 1;
+            this.Name = "No name";
+            this.Age = 1;
         }
 
         public Person(int age)
             : this()
         {
-            this.age = age;
+            this.Age = age;
         }
 
         public Person(string name, int age)
             : this(age)
         {
-            this.name = name;
+            this.Name = name;
         }
+
+        public string Name { get; set; }
+
+        public int Age { get; set; }
     }
 }

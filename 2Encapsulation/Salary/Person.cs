@@ -13,8 +13,15 @@
         this.salary = salary;
     }
 
-    public string FirstName { get { return this.firstName; } }
-    public int Age { get { return this.age; } }
+    public string FirstName
+    {
+        get { return this.firstName; }
+    }
+
+    public int Age
+    {
+        get { return this.age; }
+    }
 
     public override string ToString()
     {
@@ -33,4 +40,3 @@
         }
     }
 }
-

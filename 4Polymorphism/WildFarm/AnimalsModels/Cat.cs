@@ -2,16 +2,16 @@
 {
     private string breed;
 
-    public string Breed
-    {
-        get { return this.breed; }
-        set { this.breed = value; }
-    }
-
     public Cat(string name, string type, double weight, string region, string breed)
         : base(name, type, weight, region)
     {
         this.Breed = breed;
+    }
+
+    public string Breed
+    {
+        get { return this.breed; }
+        set { this.breed = value; }
     }
 
     public override string MakeSound()

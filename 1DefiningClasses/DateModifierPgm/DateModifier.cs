@@ -1,7 +1,6 @@
 ﻿using System;
 
-
-class DateModifier
+public class DateModifier
 {
     private int difference;
 
@@ -18,4 +17,3 @@ class DateModifier
         this.difference = Math.Abs(period.Days);
     }
 }
-

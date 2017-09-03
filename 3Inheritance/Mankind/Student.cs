@@ -14,7 +14,11 @@ public class Student : Human
 
     public string FacNum
     {
-        get { return this.facNum; }
+        get
+        {
+            return this.facNum;
+        }
+
         private set
         {
             if (!value.All(char.IsLetterOrDigit))
@@ -40,4 +44,3 @@ public class Student : Human
         return sb.ToString();
     }
 }
-

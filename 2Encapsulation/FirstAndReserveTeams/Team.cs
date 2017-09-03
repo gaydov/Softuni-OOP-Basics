@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 public class Team
 {
@@ -14,18 +13,6 @@ public class Team
         this.reserveTeam = new List<Person>();
     }
 
-    public void AddPlayer(Person person)
-    {
-        if (person.Age < 40)
-        {
-            firstTeam.Add(person);
-        }
-        else
-        {
-            reserveTeam.Add(person);
-        }
-    }
-
     public IReadOnlyCollection<Person> FirstTeam
     {
         get { return this.firstTeam.AsReadOnly(); }
@@ -35,5 +22,16 @@ public class Team
     {
         get { return this.reserveTeam.AsReadOnly(); }
     }
-}
 
+    public void AddPlayer(Person person)
+    {
+        if (person.Age < 40)
+        {
+            this.firstTeam.Add(person);
+        }
+        else
+        {
+            this.reserveTeam.Add(person);
+        }
+    }
+}

@@ -8,8 +8,8 @@ namespace BashSoft.Models
         public const int NumberOfTasksOnExam = 5;
         public const int MaxScoreOnExamTask = 100;
 
-        private string name;
         public Dictionary<string, Student> studentsByName;
+        private string name;
 
         public Course(string name)
         {
@@ -24,13 +24,18 @@ namespace BashSoft.Models
 
         public string Name
         {
-            get { return this.name; }
+            get
+            {
+                return this.name;
+            }
+
             private set
             {
                 if (string.IsNullOrEmpty(value))
                 {
                     throw new InvalidStringException();
                 }
+
                 this.name = value;
             }
         }

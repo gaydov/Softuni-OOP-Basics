@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 public class Chicken
 {
@@ -17,7 +16,10 @@ public class Chicken
 
     public string Name
     {
-        get { return this.name; }
+        get
+        {
+            return this.name;
+        }
 
         internal set
         {
@@ -32,7 +34,10 @@ public class Chicken
 
     public int Age
     {
-        get { return this.age; }
+        get
+        {
+            return this.age;
+        }
 
         protected set
         {

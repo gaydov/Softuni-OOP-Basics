@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DefiningClasses
 {
@@ -42,8 +42,6 @@ namespace DefiningClasses
                         Print(accountID, accounts);
                         break;
                 }
-
-
 
                 input = Console.ReadLine();
             }
@@ -104,4 +102,3 @@ namespace DefiningClasses
         }
     }
 }
-

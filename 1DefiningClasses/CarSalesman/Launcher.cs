@@ -53,8 +53,8 @@ namespace CarSalesman
             int carsCount = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < carsCount; i++)
-            { 
-                string[] carInfo = Console.ReadLine().Split(new char[] { ' '}, StringSplitOptions.RemoveEmptyEntries);
+            {
+                string[] carInfo = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 string carModel = carInfo[0];
                 string carEngine = carInfo[1];
                 string weight = null;

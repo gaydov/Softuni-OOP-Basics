@@ -1,11 +1,12 @@
 ﻿using System;
+using BashSoft.StaticData;
 
 namespace BashSoft.IO
 {
     public class InputReader
     {
-        private CommandInterpreter interpreter;
         private const string EndCommand = "quit";
+        private CommandInterpreter interpreter;
 
         public InputReader(CommandInterpreter interpreter)
         {
