@@ -23,8 +23,6 @@ The course covers:
 4. [Polymorphism](https://github.com/gaydov/Softuni-OOP-Basics/tree/master/4Polymorphism)
 5. [BashSoft](https://github.com/gaydov/Softuni-OOP-Basics/tree/master/BashSoft)
 
-### [Tasks' descriptions](https://drive.google.com/drive/folders/0B0i5AcwcQwXJbDlIQW5PZE1NQjg)
-
 ## Exams
 
 * [Exam 16th July 2017](https://github.com/gaydov/Softuni-OOP-Basics/tree/master/Exams/Exam-16th-July-2017)
