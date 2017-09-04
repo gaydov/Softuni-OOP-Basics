@@ -4,15 +4,15 @@ Containing the tasks from Softuni's course OOP Basics”.
 
 The course covers:
 
-- object-oriented programming principles
-- class hierarchy
-- classes and objects
-- abstraction
-- inheritance
-- encapsulation
-- polymorphism
-- functional programming
-- design patterns
+- object-oriented programming principles;
+- class hierarchy;
+- classes and objects;
+- abstraction;
+- inheritance;
+- encapsulation;
+- polymorphism;
+- functional programming;
+- design patterns;
 
 
 ## Tasks
