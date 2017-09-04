@@ -1,6 +1,6 @@
-# <p align="left">Softuni-OOP-Basics”<a href="https://softuni.bg/"><img src="https://raw.githubusercontent.com/gaydov/Softuni-Programming-Fundamentals/master/Exams/Sample-Exam-II-June-2016/SoftUniAirline/img/softuniLogo.PNG" alt="Softuni logo" width="200" align="right"></a><p>
+# <p align="left">Softuni-OOP-Basics<a href="https://softuni.bg/"><img src="https://raw.githubusercontent.com/gaydov/Softuni-Programming-Fundamentals/master/Exams/Sample-Exam-II-June-2016/SoftUniAirline/img/softuniLogo.PNG" alt="Softuni logo" width="200" align="right"></a><p>
 
-Containing the tasks from Softuni's course OOP Basics”.
+Containing the tasks from Softuni's course OOP Basics.
 
 The course covers:
 
